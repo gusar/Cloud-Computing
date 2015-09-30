@@ -1,3 +1,6 @@
+# NOT FINAL SOLUTION
+# CHECK euler19v2.py
+
 # This version uses nested for loops to cycle through years, months, weeks and days.
 # Each time year changes, leap year is determined. Then every week the number of
 # the days are calculated which belong to the current month.
