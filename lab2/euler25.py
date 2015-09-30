@@ -1,3 +1,7 @@
+# Two number must be kept in memory: n-1 and n-2
+# they are then used to calculate the next number.
+# A count variable is used to keep track of the index.
+
 oldnum = 0
 num = 1
 index = 0

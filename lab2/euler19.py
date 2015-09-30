@@ -1,3 +1,10 @@
+# This version uses nested for loops to cycle through years, months, weeks and days.
+# Each time year changes, leap year is determined. Then every week the number of
+# the days are calculated which belong to the current month.
+# A separate counter keeps track of the current day of the week.
+# Every time if the week day counter index is zero, and the week index is zero,
+# a sunday counter increments.
+
 yearCount = 0
 year = 1900
 month = 0
