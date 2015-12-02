@@ -9,14 +9,14 @@ import sys
 access_key = ""
 secret_access_key = ""
 keys = urllib2.urlopen("http://ec2-52-30-7-5.eu-west-1.compute.amazonaws.com:81/key").read()
-access_key, secret_access_key = keypart1.split(':')
+access_key, secret_access_key = keys.split(':')
 
-conn = boto.sqs.connect_to_region("eu-west-1", aws_access_key=access_key, aws_secret_access_key=secret_access_key)
+conn = boto.sqs.connect_to_region("eu-west-1", aws_access_key_id=access_key, aws_secret_access_key=secret_access_key)
 
 # Read from command line
-queue = sys.argv[1]
+queueName = sys.argv[1]
 # Get queue
-queue = conn.get_queue(queue)
+queue = conn.get_queue(queueName)
 # Delete queue
 conn.delete_queue(queue)
-print ("Queue " + queue + " deleted")
+print ("Queue " + queueName + " deleted")
